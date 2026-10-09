@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#b6c4ff",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "inverse-surface": "#e0e2ee",
+                        "surface-container": "#1c1f28",
+                        "surface": "#10131b",
+                        "inverse-primary": "#485b9e",
+                        "on-tertiary-fixed-variant": "#0036bb",
+                        "tertiary-container": "#001964",
+                        "on-primary": "#152b6d",
+                        "on-secondary-container": "#004d1b",
+                        "on-tertiary-fixed": "#001454",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#181b24",
+                        "on-surface-variant": "#c5c5d2",
+                        "on-tertiary-container": "#6180ff",
+                        "on-background": "#e0e2ee",
+                        "surface-container-lowest": "#0b0e16",
+                        "outline-variant": "#454650",
+                        "background": "#10131b",
+                        "error-container": "#93000a",
+                        "outline": "#8f909b",
+                        "primary-fixed": "#dce1ff",
+                        "on-primary-fixed": "#00154f",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#69ff87",
+                        "on-secondary": "#003912",
+                        "secondary-container": "#02c953",
+                        "inverse-on-surface": "#2d3039",
+                        "surface-container-high": "#272a32",
+                        "on-error": "#690005",
+                        "tertiary-fixed-dim": "#b8c4ff",
+                        "tertiary": "#b8c4ff",
+                        "on-secondary-fixed-variant": "#00531e",
+                        "surface-tint": "#b6c4ff",
+                        "secondary": "#40e56c",
+                        "tertiary-fixed": "#dde1ff",
+                        "surface-bright": "#363942",
+                        "on-primary-container": "#7386cc",
+                        "primary-container": "#001b5e",
+                        "secondary-fixed-dim": "#3ce36a",
+                        "surface-dim": "#10131b",
+                        "surface-container-highest": "#32353e",
+                        "on-primary-fixed-variant": "#2f4384",
+                        "surface-variant": "#32353e",
+                        "on-tertiary": "#002486",
+                        "on-surface": "#e0e2ee",
+                        "on-secondary-fixed": "#002108"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(24, 27, 36, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus {
+            -webkit-text-fill-color: #e0e2ee;
+            -webkit-box-shadow: 0 0 0px 1000px #32353e inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary selection:text-on-secondary">
+<main class="min-h-screen flex flex-col md:flex-row relative overflow-hidden">
+<!-- Left side (Visual Impact) -->
+<div class="hidden md:flex flex-col justify-between w-1/2 lg:w-3/5 p-12 lg:p-20 relative overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Productivity focus background" class="w-full h-full object-cover opacity-20 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrYb69Qgp8v1o2HGm5f7WlVKNXqMtE4V0X7hzVty9trsYY_m2DKzzEtGQUrNyPT3vwMb28aUjtOZfW7ijMUYdQ9e4j_lnVjqylhR7EAT91tEERqqA-Ydsc7H2QDAEVynsESkllvbjLgehKQSSkYHsotypiJxiXVob6AEuzeuIX1LPdF7HvD1yXFOZMCUAjiev8e9Lh20RbvDSy5cKBeQbGx1bcNihKHJ3kYp3HXKhgZ2vtzGBnfItuDzb8wiH3zWEJqQDSlHUlUX4a"/>
+<div class="absolute inset-0 bg-gradient-to-br from-background via-surface/90 to-transparent"></div>
+</div>
+<!-- Redone Logo Section -->
+<div class="relative z-10 space-y-8">
+<div class="brand-group flex flex-col">
+<div class="flex items-center gap-6 mb-1">
+<!-- SVG Box Icon with Dollar Sign -->
+<div class="relative w-16 h-16 flex-shrink-0">
+<svg class="w-full h-full drop-shadow-2xl" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<!-- Box Bottom/Sides -->
+<path d="M50 90 L90 75 L90 45 L50 60 Z" fill="#001B5E"></path>
+<path d="M50 90 L10 75 L10 45 L50 60 Z" fill="#001B5E"></path>
+<!-- Interior/Opening -->
+<path d="M10 45 L50 30 L90 45 L50 60 Z" fill="#000d2e"></path>
+<!-- DC Initials on left face with perspective - moved down (from matrix 1, 0.35, 0, 1, 18, 58 to 1, 0.35, 0, 1, 18, 68) -->
+<text fill="white" font-family="sans-serif" font-size="18" font-weight="900" transform="matrix(1, 0.35, 0, 1, 18, 68)">DC</text>
+<!-- Dollar Sign ($) coming out -->
+<text fill="#40e56c" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.5))" font-family="sans-serif" font-size="42" font-weight="900" text-anchor="middle" x="50" y="48">$</text>
+<!-- Front Edges/Highlights -->
+<path d="M10 45 L50 60 L90 45" fill="none" stroke="#ffffff22" stroke-width="1.5"></path>
+<path d="M50 60 V90" fill="none" stroke="#ffffff22" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<div class="text-4xl lg:text-5xl font-headline font-extrabold tracking-tight leading-none">
+<span class="text-primary">Dinheiro em</span>
+<span class="text-secondary block lg:inline ml-0 lg:ml-2">Caixa</span>
+</div>
+<span class="text-on-surface-variant font-body text-sm lg:text-base uppercase tracking-[0.2em] font-semibold mt-2">Terceirização Financeira</span>
+</div>
+</div>
+<div class="pl-24">
+<h1 class="font-headline font-bold text-2xl lg:text-3xl tracking-tighter text-primary/60 italic">Pulse Agenda</h1>
+</div>
+</div>
+</div>
+<div class="relative z-10 max-w-2xl">
+<p class="font-label text-secondary uppercase tracking-[0.3em] text-xs mb-4 font-bold">Produtividade Inteligente</p>
+<h2 class="font-headline text-6xl lg:text-8xl font-bold leading-[0.95] tracking-tighter mb-8">Sua agenda inteligente <br/>
+<span class="text-secondary">de tarefas</span></h2>
+<p class="text-on-surface-variant text-xl max-w-lg leading-relaxed font-light">
+                    A plataforma definitiva para gerenciar sua rotina com precisão. Domine suas tarefas com a agilidade que seu dia exige.
+                </p>
+</div>
+<div class="relative z-10 flex gap-12 items-center">
+<div class="flex flex-col">
+<span class="text-primary font-bold text-3xl">99.9%</span>
+<span class="text-on-surface-variant text-xs uppercase tracking-widest font-bold">Uptime Ledger</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="text-primary font-bold text-3xl">AES-256</span>
+<span class="text-on-surface-variant text-xs uppercase tracking-widest font-bold">Encryption</span>
+</div>
+</div>
+</div>
+<!-- Right side (Login Form) -->
+<div class="flex-1 flex items-center justify-center p-6 md:p-12 lg:p-24 bg-surface-container-low relative">
+<div class="w-full max-w-md space-y-10 relative z-10">
+<header class="space-y-2">
+<div class="flex gap-8 mb-12 border-b border-outline-variant/10">
+<button class="pb-4 text-sm font-bold tracking-widest uppercase border-b-2 border-secondary text-on-surface">Entrar</button>
+<button class="pb-4 text-sm font-bold tracking-widest uppercase border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors">Cadastrar</button>
+</div>
+<h3 class="font-headline text-3xl font-bold mt-4">Seja bem-vindo</h3>
+<p class="text-on-surface-variant text-sm font-body">Identifique-se para acessar seu ambiente de trabalho.</p>
+</header>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest ml-1" for="email">E-MAIL</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest text-on-surface border-none rounded-xl px-5 py-4 focus:ring-1 focus:ring-primary/20 focus:bg-primary-container transition-all placeholder:text-outline/50" id="email" placeholder="seu@email.com" type="email"/>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-secondary transition-all duration-300 group-focus-within:w-full blur-[0.5px]"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="block text-xs font-bold text-on-surface-variant uppercase tracking-widest" for="password">SENHA</label>
+<a class="text-[10px] font-bold text-primary uppercase tracking-wider hover:text-secondary transition-colors" href="#">Esqueceu a senha?</a>
+</div>
+<div class="relative group">
+<input class="w-full bg-surface-container-highest text-on-surface border-none rounded-xl px-5 py-4 focus:ring-1 focus:ring-primary/20 focus:bg-primary-container transition-all placeholder:text-outline/50" id="password" placeholder="••••••••" type="password"/>
+<div class="absolute bottom-0 left-0 h-[2px] w-0 bg-secondary transition-all duration-300 group-focus-within:w-full blur-[0.5px]"></div>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-extrabold py-5 rounded-xl text-lg hover:shadow-[0_10px_40px_-10px_rgba(182,196,255,0.4)] active:scale-[0.98] transition-all flex justify-center items-center gap-2 group" type="submit">
+                        Entrar
+                        <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</form>
+<div class="flex flex-col items-center gap-6 pt-4">
+<p class="text-sm text-on-surface-variant">
+                        Ainda não possui uma conta? 
+                        <a class="text-secondary font-bold hover:underline underline-offset-4 ml-1" href="#">Abra sua conta agora</a>
+</p>
+</div>
+<footer class="pt-12 flex flex-wrap justify-center gap-x-8 gap-y-2">
+<a class="text-[10px] font-bold uppercase tracking-widest text-outline hover:text-on-surface transition-colors" href="#">PRIVACIDADE</a>
+<a class="text-[10px] font-bold uppercase tracking-widest text-outline hover:text-on-surface transition-colors" href="#">TERMOS</a>
+<a class="text-[10px] font-bold uppercase tracking-widest text-outline hover:text-on-surface transition-colors" href="#">SUPORTE</a>
+</footer>
+</div>
+</div>
+<!-- Background Accents -->
+<div class="absolute top-0 -left-24 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] pointer-events-none"></div>
+<div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[150px] pointer-events-none"></div>
+</main>
+</body></html>
